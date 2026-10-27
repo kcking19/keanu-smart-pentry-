@@ -51,8 +51,8 @@ public class PantryActivity extends Activity {
                         else if(days<=3)flag="⚠ Expiring soon • ";
                     }catch(Exception ignored){}
                 }
-                rows.add(flag+(c.getString(1)+"  •  "+DB.amount(c.getDouble(2))+" "+c.getString(3)
-                    +(expiry==null||expiry.isEmpty()?"":"  •  expires "+expiry));
+rows.add(flag + (c.getString(1) + "  •  " + DB.amount(c.getDouble(2)) + " " + c.getString(3)
+        + (expiry == null || expiry.isEmpty() ? "" : "  •  expires " + expiry)));
             }
         }
         status.setText(rows.isEmpty()?"Your pantry is empty. Add your first ingredient!":
