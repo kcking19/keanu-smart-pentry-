@@ -1,0 +1,3 @@
+package com.keanu.smartpantry;
+import android.content.*;import android.graphics.Color;import android.view.*;import android.widget.*;import java.util.*;
+public class PantryAdapter extends BaseAdapter {Context c;ArrayList<String> rows;PantryAdapter(Context c,ArrayList<String> r){this.c=c;rows=r;}public int getCount(){return rows.size();}public Object getItem(int p){return rows.get(p);}public long getItemId(int p){return p;}public View getView(int p,View old,ViewGroup parent){TextView t=old instanceof TextView?(TextView)old:new TextView(c);t.setText(rows.get(p));t.setTextSize(17);t.setTextColor(Color.DKGRAY);t.setPadding(14,22,14,22);return t;}}
