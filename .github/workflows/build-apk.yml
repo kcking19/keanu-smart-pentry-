@@ -33,7 +33,7 @@ jobs:
           gradle-version: '8.7'
 
       - name: Build Android application
-        run: gradle assembleDebug --no-daemon
+       run: gradle assembleDebug --no-daemon --stacktrace
 
       - name: Save APK for download
         uses: actions/upload-artifact@v4
